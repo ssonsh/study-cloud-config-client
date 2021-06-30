@@ -1,0 +1,21 @@
+
+server:
+  port: 8022
+
+spring:
+  application:
+    name: studymsa
+  config:
+    import: optional:configserver:http://localhost:8011
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: sson
+    password: sson
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: busrefresh
+
